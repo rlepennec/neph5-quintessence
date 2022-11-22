@@ -1,0 +1,46 @@
+{
+  "id": "quintessence",
+  "title": "Nephilim Quintessence",
+  "description": "Module contenant les objets de Nephilim Quintessence",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10.290"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "neph5e",
+        "type": "system",
+        "compatibility": {
+          "verified": "1.2.8"
+        }
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Kartaj",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+  ],
+  "styles": [
+  ],
+  "languages": [
+  ],
+  "packs": [
+    {
+      "name": "neph5e-quintessence",
+      "label": "Nephilim Quintessence",
+      "system": "neph5e",
+      "path": "packs/quintessence.db",
+      "type": "Adventure",
+      "private": false,
+      "flags": {}
+    }
+  ],
+  "manifest": "",
+  "download": ""
+}
