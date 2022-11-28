@@ -32,7 +32,7 @@
   ],
   "packs": [
     {
-      "name": "neph5e-quintessence",
+      "name": "quintessence",
       "label": "Nephilim Quintessence",
       "system": "neph5e",
       "path": "packs/quintessence.db",
