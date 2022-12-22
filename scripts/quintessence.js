@@ -1,3 +1,7 @@
+import { Adventure } from "./adventure.js";
+import { Compendium } from "./compendium.js";
+
+/*
 const SYSTEM_ID = "neph5e";
 const MODULE_ID = "neph5e-quintessence";
 const MODULE_NAME = "Nephilim Quintessence";
@@ -31,9 +35,24 @@ const SAVOIR = {
     id: "0gLf7uB5d4WyOEut" };
 const VERSION = "version";
 const AVENTURES = [ALCHIMIE, ARCANES, EQUIPEMENT, INCARNATIONS, KABBALE, MAGIE, METAMORPHOSES, QUETES, SAVOIR];
+*/
+
+const MODULE = new Compendium("neph5e-quintessence", "Nephilim Quintessence", "1.0.0", "quintessence")
+    .withAdventure(new Adventure("u5V7I99Xxa0ryMHo", "alchimie"))
+    .withAdventure(new Adventure("3ZbPrqNI930Iqb02", "arcanes"))
+    .withAdventure(new Adventure("jimFckIZEtGKfoec", "equipement"))
+    .withAdventure(new Adventure("BrGvBmpWVka8qpFl", "incarnations"))
+    .withAdventure(new Adventure("gR6Gs1IG0PEvcn2b", "kabbale"))
+    .withAdventure(new Adventure("vFHs67tAjpcQzI5G", "magie"))
+    .withAdventure(new Adventure("QgXoJzmeyEdChvd3", "metamorphoses"))
+    .withAdventure(new Adventure("vo2RL2ArGETZUV5p", "quetes"))
+    .withAdventure(new Adventure("0gLf7uB5d4WyOEut", "savoirs"));
+
 
 Hooks.on("init", () => {
-
+    MODULE.initialize();
+})
+/*
     console.log("Initializing module " + MODULE_NAME + " " + MODULE_VERSION);
 
     game.settings.register(MODULE_ID, VERSION, {
@@ -53,13 +72,14 @@ Hooks.on("init", () => {
             default: false
         });
     }
+*/
 
-})
 
 Hooks.on("ready", async () => {
-
-    console.log("Starting module " + MODULE_NAME);
-
+    await MODULE.start();
+});
+    
+    /*
     // Update only game master
     if (!game.user.isGM) {
         return;
@@ -106,12 +126,15 @@ Hooks.on("ready", async () => {
         console.log("World updated from adventure " + aventure.name);
 
     }
+    */
 
-});
 
 Hooks.on("importAdventure", (adventure, created, updated) => {
+    MODULE.register(adventure);
+});
+    /*
     const aventure = AVENTURES.find(i => i.id === adventure.id);
     console.log("Import aventure " + aventure.name + " of the module " + MODULE_ID);
     game.settings.set(MODULE_ID, VERSION, MODULE_VERSION);
     game.settings.set(MODULE_ID, aventure.name, true);
-});
+    */
