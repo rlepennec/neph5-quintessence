@@ -2,10 +2,10 @@
   "id": "neph5e-quintessence",
   "title": "Nephilim Quintessence",
   "description": "Module contenant les objets de Nephilim Quintessence",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "compatibility": {
-    "minimum": "10",
-    "verified": "10.290"
+    "minimum": "11",
+    "verified": "11"
   },
   "relationships": {
     "systems": [
@@ -13,7 +13,7 @@
         "id": "neph5e",
         "type": "system",
         "compatibility": {
-          "verified": "1.2.12"
+          "verified": "1.4.0"
         }
       }
     ]
@@ -27,10 +27,6 @@
   "esmodules": [
     "scripts/quintessence.js"
   ],
-  "styles": [
-  ],
-  "languages": [
-  ],
   "packs": [
     {
       "name": "quintessence",
@@ -38,10 +34,13 @@
       "system": "neph5e",
       "path": "packs/quintessence.db",
       "type": "Adventure",
-      "private": false,
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
-  "manifest": "",
-  "download": ""
+  "manifest": "https://github.com/rlepennec/neph5-quintessence/releases/latest/download/module.json",
+  "download": "https://github.com/rlepennec/neph5-quintessence/releases/download/v1.1.0/module.zip"
 }

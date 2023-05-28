@@ -1,7 +1,7 @@
 import { Adventure } from "./adventure.js";
 import { Compendium } from "./compendium.js";
 
-const MODULE = new Compendium("neph5e-quintessence", "Nephilim Quintessence", "1.0.0", "quintessence")
+const MODULE = new Compendium("neph5e-quintessence", "Nephilim Quintessence", "1.1.0", "quintessence")
     .withAdventure(new Adventure("u5V7I99Xxa0ryMHo", "alchimie"))
     .withAdventure(new Adventure("3ZbPrqNI930Iqb02", "arcanes"))
     .withAdventure(new Adventure("jimFckIZEtGKfoec", "equipement"))
