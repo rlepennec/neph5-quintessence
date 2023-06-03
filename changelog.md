@@ -1,3 +1,6 @@
+# 1.2.0
+Correction des cartes d'Arcanes Majeurs
+
 # 1.1.0
 Version compatible Foundry VTT 11
 
