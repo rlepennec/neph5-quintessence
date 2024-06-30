@@ -66,7 +66,7 @@ export class Compendium {
 
         // Retrieve the imported version
         const version = game.settings.get(this.id, 'version');
-        if (version !== "0.0.0" && !isNewerVersion(version, this.version)) {
+        if (version !== "0.0.0" && !foundry.utils.isNewerVersion(version, this.version)) {
             return;
         }
 
